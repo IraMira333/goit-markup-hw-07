@@ -1,0 +1,28 @@
+/** @format */
+
+@media screen and (min-width: 428px) {
+ /* -----MOB-MENU------ */
+ .mob-nav-tel {
+  font-size: 36px;
+ }
+ .mob-menu {
+  padding: 40px 24px;
+ }
+ /* ---MODALKA-- */
+ .modal {
+  max-height: 586px;
+ }
+}
+/* section 1 */
+@media screen and (max-width: 1199px) {
+ .title-third-main {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1111;
+ }
+ .text-main {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+ }
+}

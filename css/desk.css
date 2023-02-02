@@ -1,0 +1,133 @@
+/** @format */
+
+@media screen and (min-width: 1200px) {
+ .container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+ }
+
+ /* -----HEADER----- */
+ .logo {
+  line-height: 1.33;
+ }
+ .auth-nav {
+  flex-direction: row;
+  gap: 40px;
+ }
+ .auth-nav .link {
+  font-size: 16px;
+  line-height: 1.5;
+ }
+ .site-nav .link {
+  padding-bottom: 28px;
+ }
+ .site-nav {
+  margin-left: 76px;
+ }
+
+ /*----HERO----- */
+ .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  background-image: linear-gradient(
+    to right,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ),
+   url('../images/index-foto/people-office.jpg');
+ }
+ @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+   background-image: linear-gradient(
+     to right,
+     rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/index-foto/people-office-2x.jpg');
+  }
+ }
+ .hero-title {
+  margin-bottom: 48px;
+  font-size: 56px;
+  line-height: 1.071429;
+ }
+
+ /* ---Sections--- */
+ .text {
+  font-weight: 400;
+ }
+
+ /* section 1 */
+ .section-first {
+  padding-top: 120px;
+  padding-bottom: 120px;
+ }
+ .main-about {
+  display: flex;
+ }
+ .main-about .item {
+  width: calc((100% - 3 * 24px) / 4);
+ }
+ .about-item::before {
+  display: block;
+  content: '';
+  margin-bottom: 8px;
+  height: 112px;
+  background-color: var(--btn-fon-cloud);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  /* outline: 1px solid teal; */
+ }
+ .icon-antena::before {
+  background-image: url(../images/index-icons/antenna.svg);
+ }
+ .icon-clock::before {
+  background-image: url(../images/index-icons/clock.svg);
+ }
+ .icon-diagram::before {
+  background-image: url(../images/index-icons/diagram.svg);
+ }
+ .icon-astronavt::before {
+  background-image: url(../images/index-icons/astronaut.svg);
+ }
+
+ /* section 2 */
+ .section-second {
+  display: block;
+  padding-bottom: 120px;
+ }
+
+ /* section 3 */
+ .section-third {
+  padding: 120px 0;
+ }
+ .team {
+  flex-direction: row;
+  gap: 24px;
+ }
+
+ /* Section 4 */
+ .customers {
+  padding: 120px 0;
+ }
+ .icons-customers {
+  flex-wrap: nowrap;
+ }
+
+ /* -----FOOTER------ */
+ .footer {
+  padding: 100px 0;
+ }
+ .footer-box {
+  flex-wrap: nowrap;
+  gap: 80px;
+ }
+ .footer-first-box {
+  margin-right: 40px;
+ }
+}
