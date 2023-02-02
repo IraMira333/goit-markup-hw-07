@@ -214,7 +214,7 @@ body {
  .auth-nav .link:focus {
   color: var(--acsent);
  }
- }
+}
 @media screen and (min-width: 1200px) {
  .auth-nav {
   flex-direction: row;
@@ -929,9 +929,10 @@ body {
  .subscribe {
   display: flex;
   gap: 24px;
-   }
-   .sub-input {
-    width: 264px;}
+ }
+ .sub-input {
+  width: 264px;
+ }
 }
 @media screen and (min-width: 1200px) {
  .footer {
