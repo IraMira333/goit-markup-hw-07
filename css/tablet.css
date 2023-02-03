@@ -175,7 +175,31 @@
   display: flex;
   gap: 24px;
  }
+ .subscr-field {
+  margin-bottom: 0;
+ }
  .sub-input {
   width: 264px;
+ }
+
+ /* ---PORTFOLIO---- */
+ .section-portfolio {
+  padding-bottom: 96px;
+ }
+ .work-box-action .block {
+  width: 356px;
+  height: 300px;
+ }
+ .filter {
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 64px;
+  justify-content: center;
+ }
+ .work-example {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 72px;
  }
 }

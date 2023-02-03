@@ -624,7 +624,7 @@ body {
  flex-wrap: wrap;
  gap: 24px;
  row-gap: 16px;
- padding-bottom: 48px;
+ margin-bottom: 48px;
 }
 .portfolio-btn {
  text-align: center;
@@ -651,6 +651,7 @@ body {
 .work-box-action .block {
  height: 280px;
 }
+
 .work-example {
  display: flex;
  flex-direction: column;

@@ -130,4 +130,19 @@
  .footer-first-box {
   margin-right: 40px;
  }
+
+ /* ---PORTFOLIO---- */
+ .section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+ }
+ .work-box-action .block {
+  width: 360px;
+ }
+ .filter {
+  margin-bottom: 72px;
+ }
+ .work-example {
+  row-gap: 40px;
+ }
 }
