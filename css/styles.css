@@ -67,7 +67,7 @@ body {
  padding-right: 16px;
  margin-left: auto;
  margin-right: auto;
- /* outline: 1px solid red; */
+ outline: 1px solid red;
 }
 .list {
  margin: 0;
@@ -315,7 +315,8 @@ body {
  text-transform: capitalize;
 }
 .title-third,
-.title-third-main {
+.title-third-main,
+.title-third-prtf {
  margin: 0;
  margin-bottom: 8px;
  padding: 0;
@@ -611,6 +612,95 @@ body {
  bottom: 50%;
  right: 24px;
  transform: translateY(50%);
+}
+/* ---PORTFOLIO---- */
+.section-portfolio {
+ padding-bottom: 48px;
+ padding-top: 48px;
+}
+.filter {
+ display: flex;
+ width: 268px;
+ flex-wrap: wrap;
+ gap: 24px;
+ row-gap: 16px;
+ padding-bottom: 48px;
+}
+.portfolio-btn {
+ text-align: center;
+ padding: 8px 16px;
+ height: 40px;
+ line-height: 1.5;
+
+ color: var(--acsent);
+ background-color: var(--btn-fon-cloud);
+ border: 1px solid var(--btn-border-color);
+ border-radius: 4px;
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus,
+.portfolio-btn:active {
+ color: var(--white-color);
+ background-color: var(--click-color);
+ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.work-box-action .block {
+ height: 280px;
+}
+.work-example {
+ display: flex;
+ flex-direction: column;
+ gap: 48px;
+}
+.work-example .work-item:hover,
+.work-example .work-item:focus {
+ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.border-prtf {
+ padding-top: 32px;
+ padding-bottom: 32px;
+ padding-left: 16px;
+ border: 1px solid var(--border-color);
+ border-top: none;
+}
+.title-third-prtf {
+ text-align: left;
+}
+/* ---ACTIONS--- */
+.work-box-action {
+ position: relative;
+ overflow: hidden;
+}
+.work-text-action {
+ position: absolute;
+ display: inline-block;
+ top: 40px;
+ left: 32px;
+ width: 296px;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 1.5;
+ letter-spacing: 0.02em;
+ color: var(--work-text-action-color);
+}
+.work-box-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: var(--work-box-action-bgc);
+ transform: translateY(100%);
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.work-item:hover .work-box-overlay,
+.work-item:focus .work-box-overlay {
+ transform: translateY(0);
 }
 
 /* ---MODALKA-- */

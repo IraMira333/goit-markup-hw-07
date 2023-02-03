@@ -4,7 +4,6 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
@@ -19,6 +18,9 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
   />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/mobile.css" />
+  <link rel="stylesheet" href="./css/tablet.css" />
+  <link rel="stylesheet" href="./css/desk.css" />
  </head>
  <body>
   <header class="page-header">
@@ -40,20 +42,104 @@
 
     <ul class="auth-nav list">
      <li class="item">
-      <a href="tel:+110001111111" class="nav-tel link">+11 (000) 111-11-11</a>
-     </li>
-     <li class="item">
       <a href="mailto:info@devstudio.com" class="nav-mail link"
        >info@devstudio.com</a
       >
      </li>
+     <li class="item">
+      <a href="tel:+110001111111" class="nav-tel link">+11 (000) 111-11-11</a>
+     </li>
     </ul>
+    <button type="button" class="menu-open-btn" data-menu-open>
+     <svg
+      width="32"
+      height="22"
+      aria-label="Mobile menu switch"
+      class="icon-open-btn"
+     >
+      <use href="./images/index-icons/sprite.svg#icon-hamburger"></use>
+     </svg>
+    </button>
+   </div>
+   <div class="mob-menu is-hidden" data-menu>
+    <div class="container">
+     <div>
+      <button type="button" class="menu-close-btn" data-menu-close>
+       <svg
+        width="8"
+        height="8"
+        aria-label="Mobile menu switch"
+        class="icon-close-btn"
+       >
+        <use href="./images/index-icons/sprite.svg#icon-close-black"></use>
+       </svg>
+      </button>
+
+      <nav>
+       <ul class="mob-site-nav list">
+        <li class="item">
+         <a href="./index.html" class="link">Studio</a>
+        </li>
+        <li class="item">
+         <a href="./portfolio.html" class="link current">Portfolio</a>
+        </li>
+        <li class="item"><a href="" class="link">Contacts</a></li>
+       </ul>
+      </nav>
+     </div>
+
+     <div>
+      <ul class="mob-auth-nav list">
+       <li class="item mob-tel-item">
+        <a href="tel:+110001111111" class="mob-nav-tel link"
+         >+11 (000) 111-11-11</a
+        >
+       </li>
+       <li class="item">
+        <a href="mailto:info@devstudio.com" class="mob-nav-mail link"
+         >info@devstudio.com</a
+        >
+       </li>
+      </ul>
+      <ul class="list mob-social-list">
+       <li>
+        <a class="link mob-social-link" href="">
+         <svg class="mob-social-icon">
+          <use href="./images/index-icons/sprite.svg#icon-instagram"></use>
+         </svg>
+        </a>
+       </li>
+       <li>
+        <a class="link mob-social-link" href="">
+         <svg class="mob-social-icon">
+          <use href="./images/index-icons/sprite.svg#icon-twitter"></use>
+         </svg>
+        </a>
+       </li>
+       <li>
+        <a class="link mob-social-link" href="">
+         <svg class="mob-social-icon">
+          <use href="./images/index-icons/sprite.svg#icon-facebook"></use>
+         </svg>
+        </a>
+       </li>
+       <li>
+        <a class="link mob-social-link" href="">
+         <svg class="mob-social-icon">
+          <use href="./images/index-icons/sprite.svg#icon-linkedin"></use>
+         </svg>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
    </div>
   </header>
 
   <main>
    <section class="section-portfolio">
     <div class="container">
+     <!--Filter-->
      <ul class="list filter">
       <li class="item">
        <button type="button" class="portfolio-btn button">All</button>
@@ -71,16 +157,40 @@
        <button type="button" class="portfolio-btn button">Marketing</button>
       </li>
      </ul>
+     <!--Work-Example-->
      <ul class="list work-example">
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Banking_App.jpg"
-         alt="App Interface"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Banking-app.jpg        1x,
+           ./images/portfolio-foto/Banking-app-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Banking-app-tab-min.jpg    1x,
+           ./images/portfolio-foto/Banking-app-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Banking-app-mob-min.jpg    1x,
+           ./images/portfolio-foto/Banking-app-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Banking-app.jpg"
+          alt="App Interface"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -89,20 +199,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Banking App Interface Concept</h3>
+        <h3 class="title-third-prtf">Banking App Interface Concept</h3>
         <p class="text">App</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Cashless_Payment.jpg"
-         alt="Phone screen"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Cashless-pay.jpg        1x,
+           ./images/portfolio-foto/Cashless-pay-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Cashless-pay-tab-min.jpg    1x,
+           ./images/portfolio-foto/Cashless-pay-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Cashless-pay-mob-min.jpg    1x,
+           ./images/portfolio-foto/Cashless-pay-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Cashless-pay.jpg"
+          alt="Phone screen"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -111,20 +244,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Cashless Payment</h3>
+        <h3 class="title-third-prtf">Cashless Payment</h3>
         <p class="text">Marketing</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Meditaion_App.jpg"
-         alt="Laptop and phone"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Meditaion.jpg         1x,
+           ./images/portfolio-foto/Meditation-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Meditation-tab-min.jpg    1x,
+           ./images/portfolio-foto/Meditation-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Meditation-mob-min.jpg    1x,
+           ./images/portfolio-foto/Meditation-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Meditaion.jpg"
+          alt="Laptop and phone"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -133,20 +289,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Meditaion App</h3>
+        <h3 class="title-third-prtf">Meditaion App</h3>
         <p class="text">App</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Taxi_Service.jpg"
-         alt="Inside car"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Taxi.jpg        1x,
+           ./images/portfolio-foto/Taxi-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Taxi-tab-min.jpg    1x,
+           ./images/portfolio-foto/Taxi-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Taxi-mob-min.jpg    1x,
+           ./images/portfolio-foto/Taxi-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Taxi.jpg"
+          alt="Inside car"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -155,20 +334,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Taxi Service</h3>
+        <h3 class="title-third-prtf">Taxi Service</h3>
         <p class="text">Marketing</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Screen_Illustrations.jpg"
-         alt="Picture on a phone"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Screen-Illustration.jpg        1x,
+           ./images/portfolio-foto/Screen-Illustration-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Screen-Illustration-tab-min.jpg    1x,
+           ./images/portfolio-foto/Screen-Illustration-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Screen-Illustration-mob-min.jpg    1x,
+           ./images/portfolio-foto/Screen-Illustration-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Screen-Illustration.jpg"
+          alt="Picture on a phone"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -177,20 +379,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Screen Illustrations</h3>
+        <h3 class="title-third-prtf">Screen Illustrations</h3>
         <p class="text">Design</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Online_Courses.jpg"
-         alt="Girl in a hat"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Online-Cours.jpg        1x,
+           ./images/portfolio-foto/Online-Cours-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Online-Cours-tab-min.jpg    1x,
+           ./images/portfolio-foto/Online-Cours-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Online-cours-mob-min.jpg    1x,
+           ./images/portfolio-foto/Online-cours-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Online-Cours.jpg"
+          alt="Girl in a hat"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -199,20 +424,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Online Courses</h3>
+        <h3 class="title-third-prtf">Online Courses</h3>
         <p class="text">Marketing</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Instagram_Stories_Concept.jpg"
-         alt="Pictures of Instagram stories"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Instagram-Stories.jpg        1x,
+           ./images/portfolio-foto/Instagram-Stories-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Instagram-Stories-tab-min.jpg    1x,
+           ./images/portfolio-foto/Instagram-Stories-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Instagram-Stories-mob-min.jpg    1x,
+           ./images/portfolio-foto/Instagram-Stories-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Instagram-Stories.jpg"
+          alt="Pictures of Instagram stories"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -220,7 +468,7 @@
          </p>
         </div>
         <div class="border-prtf">
-         <h3 class="title-third">Instagram Stories Concept</h3>
+         <h3 class="title-third-prtf">Instagram Stories Concept</h3>
          <p class="text">Design</p>
         </div>
        </div>
@@ -228,13 +476,36 @@
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Organic_Food.jpg"
-         alt="Organic food in a string bag"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Organic-Food.jpg        1x,
+           ./images/portfolio-foto/Organic-Food-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Organic-Food-tab-min.jpg    1x,
+           ./images/portfolio-foto/Organic-Food-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Organic-Food-mob-min.jpg    1x,
+           ./images/portfolio-foto/Organic-Food-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Organic-Food.jpg"
+          alt="Organic food in a string bag"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -243,20 +514,43 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Organic Food</h3>
+        <h3 class="title-third-prtf">Organic Food</h3>
         <p class="text">Web Site</p>
        </div>
       </li>
 
       <li class="work-item">
        <div class="work-box-action">
-        <img
-         class="block"
-         src="./images/portfolio-foto/Fresh_Coffee.jpg"
-         alt="A cup of Coffee"
-         width="360"
-         height="300"
-        />
+        <picture>
+         <source
+          srcset="
+           ./images/portfolio-foto/Fresh-coffee.jpg        1x,
+           ./images/portfolio-foto/Fresh-coffee-2x-min.jpg 2x
+          "
+          media="(min-width: 1200px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Fresh-coffee-tab-min.jpg    1x,
+           ./images/portfolio-foto/Fresh-coffee-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+         />
+         <source
+          srcset="
+           ./images/portfolio-foto/Fresh-coffee-mob-min.jpg    1x,
+           ./images/portfolio-foto/Fresh-coffee-mob-2x-min.jpg 2x
+          "
+          media="(min-width: 320px)"
+         />
+         <img
+          class="block"
+          src="./images/portfolio-foto/Fresh-coffee.jpg"
+          alt="A cup of Coffee"
+          width="396"
+          height="300"
+         />
+        </picture>
         <div class="work-box-overlay">
          <p class="work-text-action">
           14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -265,7 +559,7 @@
         </div>
        </div>
        <div class="border-prtf">
-        <h3 class="title-third">Fresh Coffee</h3>
+        <h3 class="title-third-prtf">Fresh Coffee</h3>
         <p class="text">Web Site</p>
        </div>
       </li>
@@ -344,5 +638,6 @@
     </div>
    </div>
   </footer>
+  <script src="./js/menu.js"></script>
  </body>
 </html>
