@@ -124,35 +124,37 @@
  .main-about .item:not(:last-child) {
   margin-bottom: 0;
  }
+ .title-third-main {
+  text-align: left;
+ }
 
  /* section 3 */
  .section-third {
-  padding: 96px 92px;
+  padding: 96px 0;
  }
  .team {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 24px;
   row-gap: 56px;
+  justify-content: center;
  }
 
  /* Section 4 */
  .customers {
-  padding: 96px 92px;
+  padding: 96px 0;
  }
  .icons-customers {
   gap: 24px;
+  justify-content: center;
  }
  .item-customer {
-  width: calc((100% - 48px) / 3);
+  width: 168px;
  }
 
  /* -----FOOTER------ */
- .footer {
-  padding-left: 92px;
-  padding-right: 148px;
- }
  .footer-box {
+  padding-left: 108px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
